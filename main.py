@@ -13,6 +13,7 @@ URL = "https://web.archive.org/web/20200518073855/https://www.empireonline.com/m
 
 # Fetch the page content and ensure the response is decoded as UTF-8.
 r = requests.get(url=URL)
+r.raise_for_status()
 r.encoding = "utf-8"
 data = r.text
 
